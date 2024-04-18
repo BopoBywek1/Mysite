@@ -4,17 +4,37 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     <meta charset="UTF-8">
-    <title>ГОЙДА </title>
+    <title>Myop</title>
 </head>
 <body>
 <div class="page-header">
     <h1>
-        <a href = "/">My opinin</a>
+        <img src ="{% static 'image/cat.jpg' %}" width="50px" height="50px">
+        <a href = "/">MY OPINION </a>
     </h1>
 </div>
-    <h1>GG</h1>
-    <p>ez ez <br> ez</p>
-    <p>ez </p>
-<div class="cube"> </div>
+<div
+        class="cube">
+</div>
+<div class="niggas">
+    <img src = "{% static 'image/niga.webp'%}" width="200px" height="200px">
+<ul>
+    {% for obj in object %}
+            <li>{{ obj.Name_Film }}<br>
+                {{obj.Duration_of_the_film}}<br>
+                {{obj.Description}}<br>
+                {{obj.year_production}}<br>
+                {{obj.Country}}<br>
+                {{obj.Genre }}<br>
+                {{obj.Director }}<br>
+                {{obj.Budget }}<br>
+                {{obj.Fees_in_the_world }}<br>
+                {{obj.Age_restrictions }}<br>
+                {{obj.World_premiere }}
+            </li>
+    {% endfor %}
+</ul>
+</div>
+
 </body>
 </html>
