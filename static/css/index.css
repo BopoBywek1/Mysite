@@ -1,21 +1,37 @@
 body{
 background-color:#ffffff;
 }
-.cube{
-    width:100px;
-    height:100px;
-}
-.page-header {
-    background-color: #292933;
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
+img{
+border-radius: 20px;
 }
 a{
-color:#e86c6e;
+color:#ffffff;
+margin:25px;
+position: absolute;
+text-decoration: none;
 }
-
-.niggas{
+.page-header {
+    background-color: #293243;
+    margin-top: 0;
+    padding: 10px 10px 10px 50px;
+    position: sticky;
+}
+.Films{
 display:flex;
-
+padding: 50px 50px 50px 50px;
+background-color:rgba(225, 220, 220, 0.5);
+border-radius: 30px;
 }
+b{
+margin-left: 50px;
+font-size: 50px;
+}
+c{
+line-height:25px;
+font-size: 20px;
+word-spacing: 10px;
+}
+ul{
+}
+
 

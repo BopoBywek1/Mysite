@@ -9,31 +9,33 @@
 <body>
 <div class="page-header">
     <h1>
-        <img src ="{% static 'image/cat.jpg' %}" width="50px" height="50px">
-        <a href = "/">MY OPINION </a>
+        <img  src ="{% static 'image/cat.jpg' %}" width="100px" height="100px">
+        <a href="/"> MY OPINION </a>
     </h1>
+
 </div>
-<div
-        class="cube">
-</div>
-<div class="niggas">
-    <img src = "{% static 'image/niga.webp'%}" width="200px" height="200px">
-<ul>
-    {% for obj in object %}
-            <li>{{ obj.Name_Film }}<br>
+
+<br>
+<br>
+
+<div class="Films">
+    <img src = "{% static 'image/1+1.jpg'%}" width="200px" height="300px" >
+    <ul style="list-style-type: none;">
+        {% for obj in object %}
+        <h1>
+            <b> {{obj.Name_Film}} </b>
+        </h1>
+            <c>
+                <li>{{obj.year_production}},
                 {{obj.Duration_of_the_film}}<br>
-                {{obj.Description}}<br>
-                {{obj.year_production}}<br>
-                {{obj.Country}}<br>
+                {{obj.Country}} -
                 {{obj.Genre }}<br>
-                {{obj.Director }}<br>
-                {{obj.Budget }}<br>
-                {{obj.Fees_in_the_world }}<br>
-                {{obj.Age_restrictions }}<br>
-                {{obj.World_premiere }}
-            </li>
-    {% endfor %}
-</ul>
+                Режиссер: {{obj.Director }}<br>
+                В ролях: Илюха гей
+                </li>
+            </c>
+        {% endfor %}
+    </ul>
 </div>
 
 </body>

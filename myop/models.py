@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Users(models.Model):
-    ID = models.IntegerField(primary_key=True)
+class User(models.Model):
+    ID = models.AutoField(primary_key=True)
     Name = models.CharField(max_length=250)
     Login = models.CharField(max_length=250)
     Password = models.CharField(max_length=250)
@@ -10,7 +10,7 @@ class Users(models.Model):
 
     def __str__(self):
         return self.Name
-class Films(models.Model):
+class Film(models.Model):
     ID = models.IntegerField(primary_key=True)
     Name_Film = models.CharField(max_length=250)
     Duration_of_the_film = models.CharField(max_length=250)
@@ -24,8 +24,25 @@ class Films(models.Model):
     Age_restrictions = models.CharField(max_length=250)
     World_premiere = models.DateField()
 
+
     def __str__(self):
         return self.Name_Film
 
+class Role(models.Model):
+    ID = models.IntegerField(primary_key=True)
+    Role = models.CharField(max_length=250)
+
+    def __str__(self):
+        return self.Role
+
+class Review(models.Model):
+    ID = models.AutoField(primary_key=True)
+    Description = models.CharField(max_length=1000)
+    Rate = models.IntegerField()
+    ID_User = models.IntegerField()
+    ID_Films = models.IntegerField()
+
+    def __str__(self):
+        return self.ID_User
 
 
