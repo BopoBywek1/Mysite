@@ -23,7 +23,7 @@ class Film(models.Model):
     Fees_in_the_world = models.CharField(max_length=250)
     Age_restrictions = models.CharField(max_length=250)
     World_premiere = models.DateField()
-
+    Photo = models.ImageField(upload_to='static/Image/')
 
     def __str__(self):
         return self.Name_Film
