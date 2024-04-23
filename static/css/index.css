@@ -17,8 +17,8 @@ text-decoration: none;
     display:flex
 }
 .Films{
-margin-top:50px;
-padding: 30px 30px 30px 30px;
+margin-top:60px;
+
 border-radius: 30px;
 word-spacing: 10px;
 font-size: 25px;
@@ -33,7 +33,15 @@ b{
 font-size: 50px;
 }
 c{
-margin-bottom:-315px;
+margin-bottom:-340px;
+background:rgba(246, 245, 245, 1);
+border-radius:30px;
+padding: 30px 30px 30px 30px;
+}
+.C:hover{
+    border-radius:30px;
+    border: 2px solid #000000;
+    transition: .3s linear;
 }
 li{
 margin-left:300px;
@@ -41,6 +49,10 @@ margin-left:300px;
 ul{
 display:flex;
 flex-direction:column;
+}
+rate{
+font-size: 25px;
+margin-left:850px;
 }
 .search{
 width: 700px;
