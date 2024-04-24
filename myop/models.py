@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 class User(models.Model):
     ID = models.AutoField(primary_key=True)
@@ -13,6 +13,7 @@ class User(models.Model):
 class Film(models.Model):
     ID = models.IntegerField(primary_key=True)
     Name_Film = models.CharField(max_length=250)
+    Name_Film_Eng = models.CharField(max_length=250)
     Duration_of_the_film = models.CharField(max_length=250)
     Description = models.CharField(max_length=500)
     year_production = models.CharField(max_length=250)
@@ -27,6 +28,8 @@ class Film(models.Model):
 
     def __str__(self):
         return self.Name_Film
+
+
 
 class Role(models.Model):
     ID = models.IntegerField(primary_key=True)
