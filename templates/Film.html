@@ -4,7 +4,8 @@
 <head>
     <link rel="stylesheet" href="{% static 'css/Film.css' %}">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Myop</title>
+    <link rel="icon" type="jpg" href="{% static 'image/cat_logo.jpg' %}">
 </head>
 <body>
 
@@ -15,7 +16,7 @@
         <img src="{{obj.Photo.url}}" width="200px" height="300px">
         </c>
             <li>
-                <b href=""> {{obj.Name_Film}} </b>
+                <b > {{obj.Name_Film}} </b>
                 <br><br>
                 {{obj.year_production}},
                 {{obj.Duration_of_the_film}}<br>

@@ -31,7 +31,7 @@
 
     <form action="{% url 'Avtoriz' %}">
     <button class="Avtoriz">
-        Авторизация
+        Войти
     </button>
     </form>
 </div>
@@ -39,9 +39,10 @@
 <div class="Films">
     <ul style="list-style-type: none;">
         {% for obj in object %}
-        <c class="C">
-        <img src="{{obj.Photo.url}}" width="200px" height="300px">
+        <c class="C" >
+        <img  src="{{obj.Photo.url}}" width="200px" height="300px">
         </c>
+
             <li>
                 <b href="{% url 'Film' pk=Film.pk}"> {{obj.Name_Film}} </b>
                 <br><br>
@@ -50,7 +51,7 @@
                 {{obj.Country}} -
                 {{obj.Genre }}<br>
                 Режиссер: {{obj.Director }}<br>
-                В ролях: Илюха гей и его близкий друг нигер<br>
+                В ролях: Актеры....<br>
                 <rate class="rateC">
                     По оценкам пользователей:
                 <img src="{% static 'image/star.png' %}" width="50px" height="50px">
@@ -59,11 +60,9 @@
                 <img src="{% static 'image/star.png' %}" width="50px" height="50px">
                 <img src="{% static 'image/star.png' %}" width="50px" height="50px">
                 </rate>
-                <p href="{% url 'Film' pk=Film.pk}">
-                    <button>
-                        Открыть
-                    </button>
-                </p>
+                <V>
+                <video controls><source type="video/mp4"  width="400px" height="400px" src="{{ obj.Video.url }}" >
+                </video></V>
             </li><br><br><br>
         {% endfor %}
     </ul>

@@ -19,14 +19,15 @@ from django.contrib import admin
 from django.urls import path
 
 from Djangos import settings
-from myop.views import index_page,registra_page,avtoriz_page,film_page
+from myop.views import index_page, registra_page, avtoriz_page, film_page, user_page
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index_page, name='Main'),
     path('Registra/',registra_page, name='Registra'),
     path('Avtoriz/',avtoriz_page, name='Avtoriz'),
-    path('Film/<int:ID>/',film_page, name='Film')
+    path('Film/<int:id>/',film_page, name='Film'),
+    path('Main/profile/',user_page, name='User_page')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
