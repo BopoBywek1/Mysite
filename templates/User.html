@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/User.css' %}">
+    <meta charset="UTF-8">
+    <title>Myop</title>
+    <link rel="icon" type="jpg" href="{% static 'image/cat_logo.jpg' %}">
+</head>
+<body>
+<div class="page-header">
+
+    <h1>
+        <img src ="{% static 'image/cat.jpg' %}" width="100px" height="100px">
+        <a class="a" href="/"> MY OPINION  </a>
+    </h1>
+
+    <form action="{% url 'Main' %}" >
+    <input class="search" type="text" placeholder="Искать здесь..." name="search_N" >
+    <button class="button_search" type="submit">
+    <img src="{% static 'image/Vector.png' %}">
+    </button>
+    </form>
+
+    <form >
+    <button class="Register">
+        Имя пользователя
+    </button>
+    </form>
+
+    <form action="{% url 'Main' %}">
+    <button class="Avtoriz">
+        Выйти
+    </button>
+    </form>
+</div>
+
+<div class="Films">
+    <ul style="list-style-type: none;">
+        {% for obj in object %}
+        <c class="C">
+        <img src="{{obj.Photo.url}}" width="200px" height="300px">
+        </c>
+            <li>
+                <b href="{% url 'Film' pk=Film.pk}"> {{obj.Name_Film}} </b>
+                <br><br>
+                {{obj.year_production}},
+                {{obj.Duration_of_the_film}}<br>
+                {{obj.Country}} -
+                {{obj.Genre }}<br>
+                Режиссер: {{obj.Director }}<br>
+                В ролях: Илюха гей и его близкий друг нигер<br>
+                <rate class="rateC">
+                    По оценкам пользователей:
+                <img src="{% static 'image/star.png' %}" width="50px" height="50px">
+                <img src="{% static 'image/star.png' %}" width="50px" height="50px">
+                <img src="{% static 'image/star.png' %}" width="50px" height="50px">
+                <img src="{% static 'image/star.png' %}" width="50px" height="50px">
+                <img src="{% static 'image/star.png' %}" width="50px" height="50px">
+                </rate>
+                <V>
+                <video controls><source type="video/mp4"  width="400px" height="400px" src="{{ obj.Video.url }}" >
+                </video></V>
+            </li><br><br><br>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>
